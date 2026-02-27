@@ -2,8 +2,8 @@
 date = '2026-02-27T16:12:15+02:00'
 title = 'Main'
 +++
-## Introduction
+## Hi!
+Welcome to my personal website!
 
-This is **bold** text, and this is *emphasized* text.
-
-Visit the [Hugo](https://gohugo.io) website!
+I don't have a particular theme in mind for this website, so you might find the topics are all over the places.
+The main purpose is just to document what I have learned and share it with others, so I hope you find something useful here.

@@ -4,3 +4,6 @@ title = "Thu's Blog"
 theme= 'PaperMod'
 [params]
   author = 'Thu'
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
