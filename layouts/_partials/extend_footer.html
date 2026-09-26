@@ -1,0 +1,35 @@
+{{- /* Footer is partialCached per Kind, so no per-page conditions here; the script exits when a page has no TOC. */ -}}
+{{- if .IsPage }}
+<script>
+  // Highlight the table-of-contents link for the section currently in view.
+  (function () {
+    var links = document.querySelectorAll('.toc a[href^="#"]');
+    if (!links.length) return;
+    var byId = {};
+    links.forEach(function (a) { byId[decodeURIComponent(a.hash.slice(1))] = a; });
+    var headings = Array.prototype.filter.call(
+      document.querySelectorAll('.post-content [id]'),
+      function (h) { return byId[h.id]; }
+    );
+    var active = null;
+    function update() {
+      var current = headings[0];
+      headings.forEach(function (h) {
+        if (h.getBoundingClientRect().top < 120) current = h;
+      });
+      var link = current && byId[current.id];
+      if (link === active) return;
+      if (active) active.classList.remove('toc-active');
+      if (link) link.classList.add('toc-active');
+      active = link;
+    }
+    var queued = false;
+    window.addEventListener('scroll', function () {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(function () { queued = false; update(); });
+    }, { passive: true });
+    update();
+  })();
+</script>
+{{- end }}

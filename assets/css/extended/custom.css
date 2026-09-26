@@ -1,4 +1,202 @@
 /* Overrides for the PaperMod theme. Variables live in themes/PaperMod/assets/css/core/theme-vars.css */
 :root {
-    --main-width: 900px; /* theme default: 720px */
+    --main-width: 1020px; /* theme default: 720px */
+}
+
+/* Categories page (layouts/shortcodes/category-groups.html) */
+.cat-group {
+    margin-bottom: 32px;
+}
+
+.post-content .cat-group-title {
+    margin: 0 0 4px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--secondary);
+}
+
+.post-content .cat-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.post-content .cat-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.post-content .cat-link {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary);
+    box-shadow: none;
+}
+
+.post-content .cat-link:hover {
+    box-shadow: 0 1px 0;
+}
+
+.cat-desc {
+    font-size: 15px;
+    color: var(--secondary);
+}
+
+.cat-count {
+    margin-left: auto;
+    font-size: 14px;
+    white-space: nowrap;
+    color: var(--secondary);
+}
+
+.post-content .cat-list .cat-empty {
+    font-size: 15px;
+    font-style: italic;
+    color: var(--secondary);
+}
+
+/* About page: photo on the left, text flowing on its right */
+.post-content .about-photo {
+    float: left;
+    margin: 0 28px 16px 0;
+}
+
+.post-content .about-photo img {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .post-content .about-photo {
+        float: none;
+        margin: 0 0 16px;
+    }
+}
+
+/* Nav menu: current page shown by brighter, bolder text instead of an underline */
+#menu a span {
+    color: var(--secondary);
+    transition: color 0.15s;
+}
+
+#menu a:hover span {
+    color: var(--primary);
+}
+
+#menu .active {
+    border-bottom: none;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* Table of contents: plain list above the post; sticky sidebar on wide screens */
+.toc,
+[data-theme="dark"] .toc {
+    margin: 0 0 32px;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+}
+
+.toc details summary {
+    margin: 0 0 8px;
+    list-style: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    cursor: pointer;
+}
+
+.toc details summary::-webkit-details-marker {
+    display: none;
+}
+
+.toc details[open] summary {
+    cursor: pointer;
+}
+
+.toc .details {
+    font-weight: 600;
+}
+
+.toc .inner {
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+}
+
+.toc ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.toc li {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.toc li ul {
+    margin-inline-start: 12px;
+}
+
+.toc a {
+    display: block;
+    padding: 4px 0;
+    color: var(--secondary);
+    transition: color 0.15s;
+}
+
+.toc a:hover,
+.toc a.toc-active {
+    color: var(--primary);
+    box-shadow: none;
+}
+
+@media (min-width: 1500px) {
+    .post-single {
+        position: relative;
+    }
+
+    /* Sits in the gutter to the right of the post, full post height so the list can stick */
+    .toc,
+    [data-theme="dark"] .toc {
+        position: absolute;
+        top: 0;
+        left: calc(100% + 48px);
+        width: 220px;
+        height: 100%;
+        margin: 0;
+    }
+
+    .toc details {
+        position: sticky;
+        top: 32px;
+        max-height: calc(100vh - 64px);
+        overflow-y: auto;
+    }
+
+    .toc details summary {
+        pointer-events: none; /* always open in the sidebar */
+    }
+
+    .toc .inner {
+        padding-left: 12px;
+        border-left: 1px solid var(--border);
+    }
+
+    .toc a.toc-active {
+        margin-left: -13px;
+        padding-left: 11px;
+        border-left: 2px solid var(--primary);
+    }
 }

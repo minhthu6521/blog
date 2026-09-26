@@ -6,6 +6,7 @@ theme: 'PaperMod'
 params:
   author: 'Thu'
   ShowToc: true
+  TocOpen: true
   disableSpecial1stPost: true
 
 caches:
@@ -16,5 +17,9 @@ menu:
   main:
     - identifier: categories
       name: Categories
-      url: /categories
+      pageRef: /categories
       weight: 10
+    - identifier: about
+      name: About me
+      pageRef: /about
+      weight: 20

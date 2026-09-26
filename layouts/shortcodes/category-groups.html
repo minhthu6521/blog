@@ -1,0 +1,20 @@
+{{- /* Renders the groups defined in the page's front matter as a list of sections. */ -}}
+{{- range .Page.Params.groups }}
+<section class="cat-group">
+  <h2 class="cat-group-title">{{ .name }}</h2>
+  <ul class="cat-list">
+    {{- range .sections }}
+    {{- with site.GetPage (printf "/%s" .) }}
+    {{- $count := len .RegularPages }}
+    <li>
+      <a class="cat-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{- with .Description }}<span class="cat-desc">{{ . }}</span>{{ end }}
+      <span class="cat-count">{{ $count }} {{ cond (eq $count 1) "post" "posts" }}</span>
+    </li>
+    {{- end }}
+    {{- else }}
+    <li class="cat-empty">Nothing here yet</li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}
