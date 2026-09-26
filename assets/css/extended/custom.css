@@ -1,0 +1,4 @@
+/* Overrides for the PaperMod theme. Variables live in themes/PaperMod/assets/css/core/theme-vars.css */
+:root {
+    --main-width: 900px; /* theme default: 720px */
+}
