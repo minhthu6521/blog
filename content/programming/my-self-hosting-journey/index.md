@@ -1,6 +1,7 @@
 +++
 date = '2026-09-27T14:19:45+03:00'
 title = 'My Self Hosting Journey'
+description = 'Some random thoughts about what I have done setting up my own server'
 +++
 
 About two and a half years ago, I decided to start my own local server at home. There wasn't any specific reason for it, but since I'm already working in the IT field and I happen to have a spare laptop, I thought it would make sense to at least try it. 
