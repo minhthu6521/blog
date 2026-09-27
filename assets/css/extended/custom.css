@@ -1,6 +1,24 @@
 /* Overrides for the PaperMod theme. Variables live in themes/PaperMod/assets/css/core/theme-vars.css */
 :root {
     --main-width: 1020px; /* theme default: 720px */
+    --bold-color: rgb(180, 83, 9);
+    --italic-color: rgb(15, 118, 110);
+}
+
+:root[data-theme="dark"] {
+    --bold-color: rgb(251, 191, 36);
+    --italic-color: rgb(94, 234, 212);
+}
+
+/* Give bold/italic emphasis some color instead of just weight/slant, on every post */
+.post-content strong,
+.post-content b {
+    color: var(--bold-color);
+}
+
+.post-content em,
+.post-content i {
+    color: var(--italic-color);
 }
 
 /* Categories page (layouts/shortcodes/category-groups.html) */
