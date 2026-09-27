@@ -16,7 +16,7 @@ sections = []
 
 [[groups]]
 name = 'Programming'
-sections = []
+sections = ['programming']
 
 [[groups]]
 name = 'Others'

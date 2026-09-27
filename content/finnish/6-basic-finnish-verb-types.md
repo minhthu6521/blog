@@ -1,7 +1,7 @@
 +++
 date = '2026-04-16T14:03:50+03:00'
 title = '6 Basic Finnish Verb Types'
-subtitle = 'A guide to the six basic Finnish verb types and their conjugation patterns'
+description = 'A guide to the six basic Finnish verb types and their conjugation patterns'
 +++
 
 > This topic is one of the most basic topic in Finnish grammar. It seems really easy at first, but when encountering it in practice, I started to forget all the rules and patterns, especially when there is a need for quick reaction i.e chatting or listening. So my advice would be to learn it by heart i.e make it so that everything can come without you making the effort of remembering the rules.
