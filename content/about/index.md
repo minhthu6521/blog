@@ -11,6 +11,6 @@ I'm a software developer for almost a decade. Beside sitting at my desk and star
 that I've come across in my life.
 
 From this blog you can find many different random things, so there is really no particular theme for this website. 
-I hope you find something useful here, and if you have any questions, feel free to contact me.
+I hope you find something useful here, and if you have any questions, feel free to contact me. You can contact me here [Linkedin](https://www.linkedin.com/in/thunguyen6521/) | [Github](https://github.com/minhthu6521)
 
 On the left side is the picture of my lovely cat :) 
